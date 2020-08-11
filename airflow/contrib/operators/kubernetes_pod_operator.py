@@ -316,8 +316,6 @@ class KubernetesPodOperator(BaseOperator):  # pylint: disable=too-many-instance-
             final_state, _, result = self.create_new_pod_for_operator(labels, launcher)
         return final_state, result
 
-
-
     @staticmethod
     def _get_pod_identifying_label_string(labels):
         filtered_labels = {label_id: label for label_id, label in labels.items() if label_id != 'try_number'}
